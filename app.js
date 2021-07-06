@@ -1,4 +1,5 @@
 // import functions and grab DOM elements
+import avocados from "./avocados.js";    // avocados array
 
 // initialize state
 
