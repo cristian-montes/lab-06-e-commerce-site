@@ -1,9 +1,14 @@
 // import functions and grab DOM elements
-import avocados from "./avocados.js";    // avocados array
+import avocadosInfo from './avocados.js';    // avocados array
+import { renderAvocado } from './render-avocados.js';
 
 // initialize state
 
-// set event listeners 
-  // get user input
-  // use user input to update state 
-  // update DOM to reflect the new state
+
+const avocadoSection = document.getElementById('avocado-section');
+
+// for of loop to go through the objects in the avocados object
+for (let aV of avocadosInfo){
+    const showAvocados = renderAvocado(aV);
+    avocadoSection.appendChild(showAvocados);
+}

@@ -28,12 +28,35 @@ const avocado3 = {
     cost: 0.70
 };
 
+const avocado4 = {
+    id: 'avocado4',
+    name: 'maluma avocado',
+    image: 'maluma-avocado.jpeg',
+    description: 'Similar taste characteristcis as hass, but usually presents bigger size',
+    category: 'tree-fruit',
+    price: 1.80,
+    cost: 0.55
+};
 
-const avocados = [
+const avocado5 = {
+    id: 'avocado5',
+    name: 'pirkenton avocado',
+    image: 'pirkenton-avocado.jpeg',
+    description: 'Known for its earthy tasty and small size. It only grows in central Guatemala',
+    category: 'tree-fruit',
+    price: 1.60,
+    cost: 0.45
+};
+
+
+
+const avocadosInfo = [
     avocado1,
     avocado2,
-    avocado3
+    avocado3,
+    avocado4,
+    avocado5
 ];
 
-export default avocados;
+export default avocadosInfo;
 
