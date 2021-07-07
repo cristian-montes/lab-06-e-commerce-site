@@ -1,1 +1,35 @@
 /* add home page styles here */
+#avocado-section {
+    display: flex;
+    flex-wrap: wrap;
+
+}
+#avocado-section li {
+    width: 400px;
+    height: 600px;
+    border: 1px solid gray;
+    padding: 10px;
+    margin-right: 10px;
+    display: grid;
+}
+
+#avocado-section  li h3{
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 5px;
+}
+
+/* #avocado-section  li img {
+    width: 70%;
+
+} */
+
+img { 
+
+    width: 300px;
+    height: 200px;
+}
+p {
+    margin: 0px;
+}

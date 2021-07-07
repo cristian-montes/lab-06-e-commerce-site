@@ -12,14 +12,14 @@ export function renderAvocado(avocado){
     const descriptionh4 = document.createElement('h4');
     descriptionh4.textContent = `${avocado.description}`;
 
-    const categorySpan = document.createElement('span');
-    categorySpan.textContent = `${avocado.category}`;
+    const categoryp = document.createElement('p');
+    categoryp.textContent = `Type : ${avocado.category}`;
     
-    const priceSpan = document.createElement('span');
-    priceSpan.textContent = `${avocado.price}`;
+    const pricep = document.createElement('p');
+    pricep.textContent = `$${avocado.price}`;
 
-    const costSpan = document.createElement('span');
-    costSpan.textContent = `${avocado.cost}`;
+    const costp = document.createElement('p');
+    costp.textContent = `$${avocado.cost}`;
 
     const buttonAdd = document.createElement('button');
     buttonAdd.textContent = 'Add to Cart';
@@ -27,9 +27,9 @@ export function renderAvocado(avocado){
     avocadoLI.appendChild(nameh3);
     avocadoLI.appendChild(avocadoImg);
     avocadoLI.appendChild(descriptionh4);
-    avocadoLI.appendChild(categorySpan);
-    avocadoLI.appendChild(priceSpan);
-    avocadoLI.appendChild(costSpan);
+    avocadoLI.appendChild(categoryp);
+    avocadoLI.appendChild(pricep);
+    avocadoLI.appendChild(costp);
     avocadoLI.appendChild(buttonAdd);
 
 
