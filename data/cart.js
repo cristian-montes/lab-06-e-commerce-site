@@ -1,6 +1,9 @@
 const cart = [
     { id:1, qty:2 },
-    { id:6, qty:3 },
+    { id:3, qty:3 },
+    { id:5, qty:4 },
+    { id:2, qty:5 },
+    { id:4, qty:8 },
 
 ];
 
