@@ -23,6 +23,8 @@ export function renderAvocado(avocado){
 
     const buttonAdd = document.createElement('button');
     buttonAdd.textContent = 'Add to Cart';
+    buttonAdd.value = avocado.id;
+    buttonAdd.classList.add('add');
 
     avocadoLI.appendChild(nameh3);
     avocadoLI.appendChild(avocadoImg);
