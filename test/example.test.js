@@ -1,10 +1,12 @@
 // IMPORT MODULES under test here:
 import { renderAvocado } from '../render-avocados.js';
-
-import { findById, calcItemTotal } from '../utils.js';
+import { findById, calcOrderTotal, createTableRow } from '../utils.js';
+import avocadosInfo from '../data/avocados.js';
 
 
 const test = QUnit.test;
+
+
 
 
 
@@ -38,6 +40,8 @@ test('test function renderAvocado for avocado2', (expect) => {
 
 
 
+
+
 // TESTING FINDID FUNCTION
 
 test('test function findID for tacos', (expect) => {
@@ -55,10 +59,39 @@ test('test function findID for tacos', (expect) => {
     expect.deepEqual(actual, expected);    
 });
 
+test('test function findID for avocadosInfo', (expect) => {
+    //Arrange
+    // Set up your arguments and expectations
+    const expected = {
+        id: 2,
+        name: 'hass avocado',
+        image: 'hass-avocado.jpeg',
+        description: 'Creamy flesh, perfect size avocado for any dish',
+        category: 'tree-fruit',
+        price: 2.00,
+        cost: 0.50
+    };
+    
+    //Act 
+    // Call the function you're testing and set the result to a const
+    const actual = findById(avocadosInfo, 2);
 
-// TESTING CALCITEMTOTAL FUNCTION
+    //Expect
+    // Make assertions about what is expected versus the actual result
+    expect.deepEqual(actual, expected);    
+});
 
-test('test function calcItemTotal for tacos', (expect) => {
+
+
+
+
+
+
+
+
+
+// TESTING CALCODER TOTAL FUNCTION
+test('test function calcItemTotal', (expect) => {
     //Arrange
     // Set up your arguments and expectations
     const cart = [
@@ -77,9 +110,43 @@ test('test function calcItemTotal for tacos', (expect) => {
     
     //Act 
     // Call the function you're testing and set the result to a const
-    const actual = calcItemTotal(data, cart);
+    const actual = calcOrderTotal(data, cart);
 
     //Expect
     // Make assertions about what is expected versus the actual result
-    expect.equal(expected, actual);    
+    expect.deepEqual(expected, actual);    
 });
+
+// TESTING  CREATE A TABLE ROW FUNCTION
+
+test('test function renderAvocado for avocado2', (expect) => {
+    //Arrange
+    // Set up your arguments and expectations
+    const avocado2 = {
+        id: '2',
+        name: 'hass avocado',
+        image: 'hass-avocado.jpeg',
+        description: 'Creamy flesh, perfect size avocado for any dish',
+        category: 'tree-fruit',
+        price: 2.00,
+        cost: 0.50
+    };
+
+    const avocadoCar = {
+        id: 2,
+        qty: 2
+    };
+    const expected = `<tr><td>hass avocado</td><td>$2.00</td><td>2</td><td>$4.00</td></tr>`;
+    const dom = createTableRow(avocado2, avocadoCar);
+    const html = dom.outerHTML;
+    
+    //Act 
+    // Call the function you're testing and set the result to a const
+
+    //Expect
+    // Make assertions about what is expected versus the actual result
+    expect.equal(html, expected);    // NOTE: .outerHTML had to be ued on actual to compare apples to apples ... since expected is .outterHTML
+});
+
+
+
