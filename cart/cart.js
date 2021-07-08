@@ -9,11 +9,17 @@ const tableBody = document.getElementById('table-body');
 
 // LOOP THRU ITMES IN DATA CART
 
+
 for (let cartItems of cartInfo){
     const findAvocados = findById(avocadosInfo, cartItems.id);
     const tableRow = createTableRow(findAvocados, cartItems);
     tableBody.appendChild(tableRow);
 }
+
+
+
+
+
 
 const cartTotal = document.getElementById('order-total');
 const total = calcOrderTotal(avocadosInfo, cartInfo);
