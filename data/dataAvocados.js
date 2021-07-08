@@ -24,7 +24,7 @@ const avocado3 = {
     image: 'mendez-avocado.jpeg',
     description: 'Creamy, buttery, idial  avocado for a great gucamole. This is the most common and famos of all avocados in the market. Mainly produce on the south west part of Mexico',
     category: 'tree-fruit',
-    price: 2.10,
+    price: 4.00,
     cost: 0.70
 };
 
@@ -34,7 +34,7 @@ const avocado4 = {
     image: 'maluma-avocado.jpeg',
     description: 'Similar taste characteristcis as hass, but usually presents bigger size',
     category: 'tree-fruit',
-    price: 1.80,
+    price: 3.00,
     cost: 0.55
 };
 
@@ -44,7 +44,7 @@ const avocado5 = {
     image: 'pirkenton-avocado.jpeg',
     description: 'Known for its earthy tasty and small size. It only grows in central Guatemala',
     category: 'tree-fruit',
-    price: 1.60,
+    price: 2.00,
     cost: 0.45
 };
 
