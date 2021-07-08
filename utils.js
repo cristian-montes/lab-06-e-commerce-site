@@ -32,12 +32,24 @@ export function createTableRow(avocadoItem, cartItem){
     tr.appendChild(tdQty);
 
     const tdTotal = document.createElement('td');
-    const total = avocadoItem.price * cartItem.qty;
-    tdTotal.textContent = toUSD(total);
+    // const total = avocadoItem.price * cartItem.qty;
+   
+    tdTotal.textContent = `$${calcItemTotal(avocadoItem.price, cartItem.qty)}.00`;
+
     tr.appendChild(tdTotal);
 
     return tr;
 }
+
+
+export function calcItemTotal(quantity, price) { 
+
+    const total = quantity * Math.round(price * 100) / 100;
+
+    return total;  
+}
+    
+
 
 
 // FUNCTION TO CALCULATE TOTAL DOLLARS IN CART ***

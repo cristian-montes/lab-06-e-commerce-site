@@ -1,7 +1,7 @@
 // IMPORT MODULES under test here:
 import { renderAvocado } from '../render-avocados.js';
-import { findById, calcOrderTotal, createTableRow } from '../utils.js';
-import avocadosInfo from '../data/avocados.js';
+import { findById, calcOrderTotal, createTableRow,calcItemTotal } from '../utils.js';
+import avocadosInfo from '../data/dataAvocados.js';
 
 
 const test = QUnit.test;
@@ -150,3 +150,31 @@ test('test function renderAvocado for avocado2', (expect) => {
 
 
 
+
+// TESTING FINDID FUNCTION
+
+test('test CLACLITEMTOTALs', (expect) => {
+    //Arrange
+    // Set up your arguments and expectations
+    const cart = [
+        { id: 1, qty: 6 }, 
+        { id: 3, qty: 9 }
+    ];
+
+    const data = [{ 
+        id: 1, 
+        price: 2 }, 
+    { id: 3, price: 2 }
+    ];
+
+
+    const expected = 30 ;
+    
+    //Act 
+    // Call the function you're testing and set the result to a const
+    const actual = calcItemTotal(data, cart);
+
+    //Expect
+    // Make assertions about what is expected versus the actual result
+    expect.deepEqual(actual, expected);    
+});

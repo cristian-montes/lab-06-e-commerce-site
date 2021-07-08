@@ -1,5 +1,5 @@
 // import functions and grab DOM elements
-import avocadosInfo from './data/avocados.js';    // avocados array
+import avocadosInfo from './data/dataAvocados.js';    // avocados array
 import { renderAvocado } from './render-avocados.js';
 
 // initialize state
