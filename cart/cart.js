@@ -28,6 +28,25 @@ function renderCart(){
 
 renderCart();
 
+//PLACE ORDER BUTTON
+const placeOderBtn = document.getElementById('place-order-btn');
+
+const cart = getCart();
+if (cart.length === 0){
+    clearCart();
+    placeOderBtn.disable = true;
+} else {
+    placeOderBtn.addEventListener('click', ()=> {
+        alert(JSON.stringify(cart, true, 2));
+        clearCart();
+        location.href = '../index.html';
+    });
+        
+}
+    
+
+
+
 
 // EMPTY CART BUTTON EVENT LISTENER
 const emptyBtn = document.getElementById('empty-btn');
@@ -35,4 +54,5 @@ emptyBtn.addEventListener('click', ()=>{
     clearCart();
     location.reload();
 });
+
 

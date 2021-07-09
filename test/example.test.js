@@ -1,6 +1,6 @@
 // IMPORT MODULES under test here:
 import { renderAvocado } from '../render-avocados.js';
-import { findById, calcOrderTotal, createTableRow, calcItemTotal } from '../utils.js';
+import { findById, calcOrderTotal, createTableRow } from '../utils.js';
 import avocadosInfo from '../data/dataAvocados.js';
 
 
@@ -25,7 +25,7 @@ test('test function renderAvocado for avocado2', (expect) => {
         price: 2.00,
         cost: 0.50
     };
-    const expected = `<li><h3>hass avocado</h3><img src="./assets/hass-avocado.jpeg" alt="hass avocado"><h4>Creamy flesh, perfect size avocado for any dish</h4><p>Type : tree-fruit</p><p>$2</p><p>$0.5</p><button>Add to Cart</button></li>`;
+    const expected = `<li><h3>hass avocado</h3><img src="./assets/hass-avocado.jpeg" alt="hass avocado"><h4>Creamy flesh, perfect size avocado for any dish</h4><p>Type : tree-fruit</p><p>$2</p><p>$0.5</p><button value="avocado2" class="add">Add to Cart</button></li>`;
     
     //Act 
     // Call the function you're testing and set the result to a const
