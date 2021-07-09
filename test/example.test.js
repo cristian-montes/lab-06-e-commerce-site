@@ -1,6 +1,6 @@
 // IMPORT MODULES under test here:
 import { renderAvocado } from '../render-avocados.js';
-import { findById, calcOrderTotal, createTableRow,calcItemTotal } from '../utils.js';
+import { findById, calcOrderTotal, createTableRow } from '../utils.js';
 import avocadosInfo from '../data/dataAvocados.js';
 
 
@@ -25,7 +25,7 @@ test('test function renderAvocado for avocado2', (expect) => {
         price: 2.00,
         cost: 0.50
     };
-    const expected = `<li><h3>hass avocado</h3><img src="./assets/hass-avocado.jpeg" alt="hass avocado"><h4>Creamy flesh, perfect size avocado for any dish</h4><p>Type : tree-fruit</p><p>$2</p><p>$0.5</p><button>Add to Cart</button></li>`;
+    const expected = `<li><h3>hass avocado</h3><img src="./assets/hass-avocado.jpeg" alt="hass avocado"><h4>Creamy flesh, perfect size avocado for any dish</h4><p>Type : tree-fruit</p><p>$2</p><p>$0.5</p><button value="avocado2" class="add">Add to Cart</button></li>`;
     
     //Act 
     // Call the function you're testing and set the result to a const
@@ -151,30 +151,30 @@ test('test function renderAvocado for avocado2', (expect) => {
 
 
 
-// TESTING FINDID FUNCTION
+// // TESTING FINDID FUNCTION
 
-test('test CLACLITEMTOTALs', (expect) => {
-    //Arrange
-    // Set up your arguments and expectations
-    const cart = [
-        { id: 1, qty: 6 }, 
-        { id: 3, qty: 9 }
-    ];
+// test('test CLACLITEMTOTALs', (expect) => {
+//     //Arrange
+//     // Set up your arguments and expectations
+//     const cart = [
+//         { id: 1, qty: 6 }, 
+//         { id: 3, qty: 9 }
+//     ];
 
-    const data = [{ 
-        id: 1, 
-        price: 2 }, 
-    { id: 3, price: 2 }
-    ];
+//     const data = [{ 
+//         id: 1, 
+//         price: 2 }, 
+//     { id: 3, price: 2 }
+//     ];
 
 
-    const expected = 30 ;
+//     const expected = 30 ;
     
-    //Act 
-    // Call the function you're testing and set the result to a const
-    const actual = calcItemTotal(data, cart);
+//     //Act 
+//     // Call the function you're testing and set the result to a const
+//     const actual = calcItemTotal(data, cart);
 
-    //Expect
-    // Make assertions about what is expected versus the actual result
-    expect.deepEqual(actual, expected);    
-});
+//     //Expect
+//     // Make assertions about what is expected versus the actual result
+//     expect.deepEqual(actual, expected);    
+// });
